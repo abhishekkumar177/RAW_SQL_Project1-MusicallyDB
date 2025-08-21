@@ -141,3 +141,89 @@ SQL> CREATE TABLE INVOICE (
        );
 
 Table created.
+
+
+#12 POPULATING THE ARTIST DB
+
+INSERT ALL
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (1, 'Queen')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (2, 'Beatles')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (3, 'M. Jackson')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (4, 'Madonna')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (5, 'Elton John')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (6, 'E. Presley')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (7, 'T. Swift')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (8, 'E. Sheeran')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (9, 'Coldplay')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (10, 'Adele')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (11, 'Eminem')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (12, 'B. Mars')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (13, 'Rihanna')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (14, 'Beyoncé')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (15, 'Zepellin')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (16, 'P. Floyd')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (17, 'U2')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (18, 'Nirvana')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (19, 'AC/DC')
+    INTO ARTIST (ARTIST_ID, NAME) VALUES (20, 'Guns N''R')
+SELECT 1 FROM dual;
+
+20 rows created.
+
+#13 POPULATING THE ALBUM DB
+
+INSERT ALL
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (1, 'Night at Opa', 1)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (2, 'News of Worl', 1)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (3, 'Abbey Road', 2)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (4, 'Thriller', 3)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (5, 'Like a Virgi', 4)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (6, 'Rocket Man', 5)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (7, 'Blue Hawaii', 6)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (8, 'Folklore', 7)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (9, 'X', 8)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (10, 'Parachutes', 9)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (11, '21', 10)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (12, 'Slim Shady', 11)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (13, 'Doo-Wops', 12)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (14, 'Anti', 13)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (15, 'Lemonade', 14)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (16, 'IV', 15)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (17, 'Dark Side', 16)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (18, 'Achtung Ba', 17)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (19, 'Nevermind', 18)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (20, 'Unassigned', NULL)
+    INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID) VALUES (21, 'Untitled', NULL)
+SELECT 1 FROM dual;
+
+21 rows selected.
+
+#14 JOINING THE ARTIST AND ALBUM FOR OPERATIONS
+
+SQL> SELECT A.TITLE, B.NAME
+    FROM ALBUM A
+    JOIN ARTIST B ON A.ARTIST_ID = B.ARTIST_ID;
+
+TITLE           NAME
+--------------- ----------
+Night at Opa    Queen
+News of Worl    Queen
+Abbey Road      Beatles
+Thriller        M. Jackson
+Like a Virgi    Madonna
+Rocket Man      Elton John
+Blue Hawaii     E. Presley
+Folklore        T. Swift
+X               E. Sheeran
+Parachutes      Coldplay
+21              Adele
+Slim Shady      Eminem
+Doo-Wops        B. Mars
+Anti            Rihanna
+Lemonade        Beyoncé
+IV              Zepellin
+Dark Side       P. Floyd
+Achtung Ba      U2
+Nevermind       Nirvana
+
+19 rows selected.
