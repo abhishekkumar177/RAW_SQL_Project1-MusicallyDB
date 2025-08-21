@@ -227,3 +227,276 @@ Achtung Ba      U2
 Nevermind       Nirvana
 
 19 rows selected.
+
+# 15 POPULATING THE TRACK SCHEMA
+
+SQL>INSERT ALL
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (1, 'Bohemian', 1, 1, 1, 'Mercury', 355, 8875000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (2, 'LoveLife', 1, 2, 1, 'Mercury', 215, 5375000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (3, 'RockYou', 2, 3, 1, 'May', 122, 3050000, 15)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (4, 'Champion', 2, 1, 1, 'Mercury', 179, 4475000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (5, 'Together', 3, 2, 1, 'Lennon', 259, 6475000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (6, 'Something', 3, 3, 1, 'Harrison', 182, 4550000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (7, 'Sunshine', 3, 1, 1, 'Harrison', 185, 4625000, 19)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (8, 'BillieJn', 4, 2, 2, 'Jackson', 294, 7350000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (9, 'Thriller', 4, 3, 2, 'RodT', 358, 8950000, 25)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (10, 'BeatIt', 4, 1, 2, 'Jackson', 258, 6450000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (11, 'Virgin', 5, 2, 2, 'Steinberg', 230, 5750000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (12, 'Material', 5, 3, 2, 'Brown', 245, 6125000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (13, 'RocketMn', 6, 1, 1, 'EltonJohn', 280, 7000000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (14, 'TinyDanc', 6, 2, 1, 'EltonJohn', 360, 9000000, 24)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (15, 'BlueHaw', 7, 3, 2, 'Presley', 150, 3750000, 15)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (16, 'CantHelp', 7, 1, 2, 'Presley', 180, 4500000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (17, 'Cardigan', 8, 2, 5, 'Swift', 239, 5975000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (18, 'Exile', 8, 3, 5, 'Swift', 275, 6875000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (19, 'August', 8, 1, 5, 'Swift', 261, 6525000, 21)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (20, 'Sing', 9, 2, 5, 'Sheeran', 230, 5750000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (21, 'ThinkLoud', 9, 3, 5, 'Sheeran', 281, 7025000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (22, 'Yellow', 10, 1, 5, 'Coldplay', 270, 6750000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (23, 'Trouble', 10, 2, 5, 'Coldplay', 270, 6750000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (24, 'Sparks', 10, 3, 5, 'Coldplay', 240, 6000000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (25, 'Rolling', 11, 1, 2, 'Adele', 228, 5700000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (26, 'Someone', 11, 2, 2, 'Adele', 285, 7125000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (27, 'SetFire', 11, 3, 2, 'Adele', 242, 6050000, 19)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (28, 'Intro', 12, 1, 3, 'Eminem', 97, 2425000, 15)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (29, 'MyNameIs', 12, 2, 3, 'Eminem', 268, 6700000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (30, 'Guilty', 12, 3, 3, 'Eminem', 218, 5450000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (31, 'Grenade', 13, 1, 2, 'BrunoMars', 223, 5575000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (32, 'JustWay', 13, 2, 2, 'BrunoMars', 220, 5500000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (33, 'MarryYou', 13, 3, 2, 'BrunoMars', 232, 5800000, 19)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (34, 'Work', 14, 1, 4, 'Rihanna', 219, 5475000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (35, 'KissItBt', 14, 2, 4, 'Rihanna', 265, 6625000, 21)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (36, 'NeededMe', 14, 3, 4, 'Rihanna', 193, 4825000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (37, 'Formation', 15, 1, 4, 'Beyonce', 233, 5825000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (38, 'Sorry', 15, 2, 4, 'Beyonce', 220, 5500000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (39, 'Freedom', 15, 3, 4, 'Beyonce', 271, 6775000, 23)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (40, 'DNA', 16, 1, 3, 'Kendrick', 185, 4625000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (41, 'Humble', 16, 2, 3, 'Kendrick', 177, 4425000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (42, 'Loyalty', 16, 3, 3, 'Kendrick', 215, 5375000, 19)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (43, 'Money', 17, 1, 1, 'PinkFloyd', 382, 9550000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (44, 'Time', 17, 2, 1, 'PinkFloyd', 414, 10350000, 24)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (45, 'Breathe', 17, 3, 1, 'PinkFloyd', 169, 4225000, 18)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (46, 'One', 18, 1, 1, 'U2', 272, 6800000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (47, 'Mysterious', 18, 2, 1, 'U2', 245, 6125000, 19)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (48, 'UntilEnd', 18, 3, 1, 'U2', 260, 6500000, 20)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (49, 'Smells', 19, 1, 5, 'Nirvana', 301, 7525000, 22)
+    INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, COMPOSER, DURATION_IN_SECS, BYTES, UNIT_PRICE)
+        VALUES (50, 'ComeAsYou', 19, 2, 5, 'Nirvana', 219, 5475000, 19)
+SELECT 1 FROM dual;
+
+50 rows created.
+
+# 16 POPULATING THE PLAYLIST SCHEMA
+
+SQL> INSERT ALL
+  2      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (1, 'RockClass')
+  3      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (2, 'PopHits')
+  4      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (3, 'Mix90s')
+  5      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (4, 'Workout')
+  6      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (5, 'ChillVibes')
+  7      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (6, 'PartyTime')
+  8      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (7, 'LoveSongs')
+  9      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (8, 'RoadTrip')
+ 10      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (9, 'Top50')
+ 11      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (10, 'Acoustic')
+ 12      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (11, 'HipHop')
+ 13      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (12, 'JazzNight')
+ 14      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (13, 'IndieMix')
+ 15      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (14, 'FocusMode')
+ 16      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (15, 'DanceBeat')
+ 17      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (16, 'RelaxMode')
+ 18      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (17, 'Throwback')
+ 19      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (18, 'SoftRock')
+ 20      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (19, 'Instrumental')
+ 21      INTO PLAYLIST (PLAYLIST_ID, NAME) VALUES (20, 'GlobalMix')
+ 22  SELECT 1 FROM dual;
+
+20 rows created.
+
+# 17 POPULATING THE PLAYLIST _TRACK SCHEMA
+
+INSERT ALL
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (1, 1)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (1, 2)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (1, 3)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (2, 4)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (2, 5)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (2, 6)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (3, 7)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (3, 8)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (3, 9)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (4, 10)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (4, 11)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (4, 12)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (5, 13)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (5, 14)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (5, 15)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (6, 16)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (6, 17)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (6, 18)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (7, 19)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (7, 20)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (7, 21)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (8, 22)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (8, 23)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (8, 24)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (9, 25)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (9, 26)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (9, 27)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (10, 28)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (10, 29)
+    INTO PLAYLIST_TRACK (PLAYLIST_ID, TRACK_ID) VALUES (10, 30)
+SELECT 1 FROM dual;
+
+# 17 JOINING PLAYLIST AND PLAYLIST_TRACK SCHEMA
+
+SELECT 
+    p.PLAYLIST_ID,
+    p.NAME AS PLAYLIST_NAME,
+    t.TRACK_ID,
+    t.NAME AS TRACK_NAME
+FROM PLAYLIST p
+JOIN PLAYLIST_TRACK pt
+    ON p.PLAYLIST_ID = pt.PLAYLIST_ID
+JOIN TRACK t
+    ON pt.TRACK_ID = t.TRACK_ID
+ORDER BY p.PLAYLIST_ID, t.TRACK_ID;
+
+PLAYLIST_ID PLAYLIST_NAM   TRACK_ID TRACK_NAME
+----------- ------------ ---------- ----------
+          1 RockClass             1 Bohemian
+          1 RockClass             2 LoveLife
+          1 RockClass             3 RockYou
+          2 PopHits               4 Champion
+          2 PopHits               5 Together
+          2 PopHits               6 Something
+          3 Mix90s                7 Sunshine
+          3 Mix90s                8 BillieJn
+          3 Mix90s                9 Thriller
+          4 Workout              10 BeatIt
+          4 Workout              11 Virgin
+          4 Workout              12 Material
+          5 ChillVibes           13 RocketMn
+          5 ChillVibes           14 TinyDanc
+          5 ChillVibes           15 BlueHaw
+          6 PartyTime            16 CantHelp
+          6 PartyTime            17 Cardigan
+          6 PartyTime            18 Exile
+          7 LoveSongs            19 August
+          7 LoveSongs            20 Sing
+          7 LoveSongs            21 ThinkLoud
+          8 RoadTrip             22 Yellow
+          8 RoadTrip             23 Trouble
+          8 RoadTrip             24 Sparks
+          9 Top50                25 Rolling
+          9 Top50                26 Someone
+          9 Top50                27 SetFire
+         10 Acoustic             28 Intro
+         10 Acoustic             29 MyNameIs
+         10 Acoustic             30 Guilty
+
+30 rows selected.
+
+# 18 MULTI-JOIN IN DATABASE :: PLAYLIST,PLAYLIST_TRACK,TRACK,ALBUM,ARTIST 
+
+SELECT 
+    pl.PLAYLIST_ID,
+    pl.NAME       AS PLAYLIST_NAME,
+    t.TRACK_ID,
+    t.NAME        AS TRACK_NAME,
+    a.TITLE       AS ALBUM_TITLE,
+    ar.NAME       AS ARTIST_NAME
+FROM PLAYLIST pl
+JOIN PLAYLIST_TRACK pt 
+    ON pl.PLAYLIST_ID = pt.PLAYLIST_ID
+JOIN TRACK t 
+    ON pt.TRACK_ID = t.TRACK_ID
+JOIN ALBUM a 
+    ON t.ALBUM_ID = a.ALBUM_ID
+JOIN ARTIST ar 
+    ON a.ARTIST_ID = ar.ARTIST_ID
+ORDER BY pl.PLAYLIST_ID, t.TRACK_ID;
+
+PLAYLIST_ID PLAYLIST_NAM   TRACK_ID TRACK_NAME ALBUM_TITLE     ARTIST_NAM
+----------- ------------ ---------- ---------- --------------- ----------
+          1 RockClass             1 Bohemian   Night at Opa    Queen
+          1 RockClass             2 LoveLife   Night at Opa    Queen
+          1 RockClass             3 RockYou    News of Worl    Queen
+          2 PopHits               4 Champion   News of Worl    Queen
+          2 PopHits               5 Together   Abbey Road      Beatles
+          2 PopHits               6 Something  Abbey Road      Beatles
+          3 Mix90s                7 Sunshine   Abbey Road      Beatles
+          3 Mix90s                8 BillieJn   Thriller        M. Jackson
+          3 Mix90s                9 Thriller   Thriller        M. Jackson
+          4 Workout              10 BeatIt     Thriller        M. Jackson
+          4 Workout              11 Virgin     Like a Virgi    Madonna
+          4 Workout              12 Material   Like a Virgi    Madonna
+          5 ChillVibes           13 RocketMn   Rocket Man      Elton John
+          5 ChillVibes           14 TinyDanc   Rocket Man      Elton John
+          5 ChillVibes           15 BlueHaw    Blue Hawaii     E. Presley
+          6 PartyTime            16 CantHelp   Blue Hawaii     E. Presley
+          6 PartyTime            17 Cardigan   Folklore        T. Swift
+          6 PartyTime            18 Exile      Folklore        T. Swift
+          7 LoveSongs            19 August     Folklore        T. Swift
+          7 LoveSongs            20 Sing       X               E. Sheeran
+          7 LoveSongs            21 ThinkLoud  X               E. Sheeran
+          8 RoadTrip             22 Yellow     Parachutes      Coldplay
+          8 RoadTrip             23 Trouble    Parachutes      Coldplay
+          8 RoadTrip             24 Sparks     Parachutes      Coldplay
+          9 Top50                25 Rolling    21              Adele
+          9 Top50                26 Someone    21              Adele
+          9 Top50                27 SetFire    21              Adele
+         10 Acoustic             28 Intro      Slim Shady      Eminem
+         10 Acoustic             29 MyNameIs   Slim Shady      Eminem
+         10 Acoustic             30 Guilty     Slim Shady      Eminem
+
+30 rows selected.
