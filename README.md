@@ -717,3 +717,191 @@ INSERT ALL
 SELECT 1 FROM dual;
 
 
+# MASTER JOIN WITH NO BOTTLE NECK 
+
+SELECT 
+    C.CUSTOMER_ID,
+    C.FIRSTNAME        AS CUSTOMER_FIRSTNAME,
+    C.LASTNAME         AS CUSTOMER_LASTNAME,
+    C.EMAIL            AS CUSTOMER_EMAIL,
+    E.EMPLOYEE_ID,
+    E.FIRSTNAME        AS EMP_FIRSTNAME,
+    E.LASTNAME         AS EMP_LASTNAME,
+    I.INVOICE_ID,
+    I.INVOICE_DATE,
+    I.BILLING_ADDRESS,
+    I.BILLING_CITY,
+    I.BILLING_STATE,
+    I.BILLING_COUNTRY,
+    I.TOTAL            AS INVOICE_TOTAL,
+    IL.INVOICE_LINE_ID,
+    IL.QUANTITY,
+    IL.UNIT_PRICE      AS LINE_UNIT_PRICE,
+    T.TRACK_ID,
+    T.NAME             AS TRACK_NAME,
+    T.DURATION_IN_SECS,
+    T.UNIT_PRICE       AS TRACK_PRICE,
+    MT.NAME            AS MEDIA_TYPE,
+    G.NAME             AS GENRE,
+    A.ALBUM_ID,
+    A.TITLE            AS ALBUM_TITLE,
+    AR.ARTIST_ID,
+    AR.NAME            AS ARTIST_NAME
+FROM CUSTOMER C
+LEFT JOIN EMPLOYEE E 
+    ON C.SUPPORT_REP_ID = E.EMPLOYEE_ID
+JOIN INVOICE I 
+    ON C.CUSTOMER_ID = I.CUSTOMER_ID
+JOIN INVOICE_LINE IL 
+    ON I.INVOICE_ID = IL.INVOICE_ID
+JOIN TRACK T 
+    ON IL.TRACK_ID = T.TRACK_ID
+JOIN MEDIA_TYPE MT 
+    ON T.MEDIA_TYPE_ID = MT.MEDIA_TYPE_ID
+JOIN GENRE G 
+    ON T.GENRE_ID = G.GENRE_ID
+JOIN ALBUM A 
+    ON T.ALBUM_ID = A.ALBUM_ID
+JOIN ARTIST AR 
+    ON A.ARTIST_ID = AR.ARTIST_ID
+ORDER BY C.CUSTOMER_ID, I.INVOICE_ID, IL.INVOICE_LINE_ID;
+
+no rows selected.
+
+# BOTTLING NECK 
+
+-- 1. EMPLOYEE (Support Rep) -- pick new ID
+INSERT INTO EMPLOYEE (EMPLOYEE_ID, LASTNAME, FIRSTNAME, TITLE, HIRE_DATE, EMAIL)
+VALUES (101, 'Smith', 'John', 'Sales', SYSDATE, 'john.smith@msic.com');
+
+-- 2. CUSTOMER (linked to Employee)
+INSERT INTO CUSTOMER (CUSTOMER_ID, LASTNAME, FIRSTNAME, EMAIL, SUPPORT_REP_ID)
+VALUES (201, 'Doe', 'Jane', 'jane.doe@client.com', 101);
+
+-- 3. ARTIST (shortened to <= 10 chars)
+INSERT INTO ARTIST (ARTIST_ID, NAME)
+VALUES (301, 'Beatles');
+
+-- 4. ALBUM (new ID + linked to Artist)
+INSERT INTO ALBUM (ALBUM_ID, TITLE, ARTIST_ID)
+VALUES (401, 'Abbey Rd', 301);
+
+-- 5. MEDIA_TYPE (new ID)
+INSERT INTO MEDIA_TYPE (MEDIA_TYPE_ID, NAME)
+VALUES (11, 'MP3');
+
+-- 6. GENRE (new ID, <= 12 chars)
+INSERT INTO GENRE (GENRE_ID, NAME)
+VALUES (12, 'Rock');
+
+-- 7. TRACK (shortened name <= 10 chars)
+INSERT INTO TRACK (TRACK_ID, NAME, ALBUM_ID, MEDIA_TYPE_ID, GENRE_ID, DURATION_IN_SECS, UNIT_PRICE)
+VALUES (21, 'ComeToget', 401, 11, 12, 259, 1);
+
+-- 8. INVOICE (linked to Customer)
+INSERT INTO INVOICE (INVOICE_ID, CUSTOMER_ID, INVOICE_DATE, BILLING_ADDRESS, BILLING_CITY, BILLING_COUNTRY, TOTAL)
+VALUES (801, 201, SYSDATE, '123 Main St', 'NYC', 'USA', 10.99);
+
+-- 9. INVOICE_LINE (linked to Invoice + Track)
+INSERT INTO INVOICE_LINE (INVOICE_LINE_ID, INVOICE_ID, TRACK_ID, UNIT_PRICE, QUANTITY)
+VALUES (901, 801, 701, 1, 2);
+
+# MASTER JOIN IN END 
+
+SELECT 
+    C.CUSTOMER_ID,
+    C.FIRSTNAME        AS CUSTOMER_FIRSTNAME,
+    C.LASTNAME         AS CUSTOMER_LASTNAME,
+    C.EMAIL            AS CUSTOMER_EMAIL,
+    E.EMPLOYEE_ID,
+    E.FIRSTNAME        AS EMP_FIRSTNAME,
+    E.LASTNAME         AS EMP_LASTNAME,
+    E.TITLE            AS EMP_TITLE,
+    I.INVOICE_ID,
+    I.INVOICE_DATE,
+    I.BILLING_ADDRESS,
+    I.BILLING_CITY,
+    I.BILLING_STATE,
+    I.BILLING_COUNTRY,
+    I.TOTAL            AS INVOICE_TOTAL,
+    IL.INVOICE_LINE_ID,
+    IL.QUANTITY,
+    IL.UNIT_PRICE      AS LINE_PRICE,
+    T.TRACK_ID,
+    T.NAME             AS TRACK_NAME,
+    T.DURATION_IN_SECS,
+    T.UNIT_PRICE       AS TRACK_PRICE,
+    MT.MEDIA_TYPE_ID,
+    MT.NAME            AS MEDIA_TYPE,
+    G.GENRE_ID,
+    G.NAME             AS GENRE_NAME,
+    A.ALBUM_ID,
+    A.TITLE            AS ALBUM_TITLE,
+    AR.ARTIST_ID,
+    AR.NAME            AS ARTIST_NAME
+FROM CUSTOMER C
+JOIN INVOICE I 
+    ON C.CUSTOMER_ID = I.CUSTOMER_ID
+JOIN INVOICE_LINE IL 
+    ON I.INVOICE_ID = IL.INVOICE_ID
+JOIN TRACK T 
+    ON IL.TRACK_ID = T.TRACK_ID
+JOIN ALBUM A 
+    ON T.ALBUM_ID = A.ALBUM_ID
+JOIN ARTIST AR 
+    ON A.ARTIST_ID = AR.ARTIST_ID
+JOIN MEDIA_TYPE MT 
+    ON T.MEDIA_TYPE_ID = MT.MEDIA_TYPE_ID
+JOIN GENRE G 
+    ON T.GENRE_ID = G.GENRE_ID
+LEFT JOIN EMPLOYEE E 
+    ON C.SUPPORT_REP_ID = E.EMPLOYEE_ID
+ORDER BY C.CUSTOMER_ID, I.INVOICE_ID, IL.INVOICE_LINE_ID;
+
+# Basic Level (to get comfortable with tables)
+
+ ## List all customers with their assigned support rep’s first and last name.
+
+## Show all invoices with customer first name, last name, and invoice total.
+
+## Display all tracks with their album title and artist name.
+
+## Retrieve all tracks along with their genre and media type.
+
+## Show all employees and the number of customers they support.
+
+# Intermediate Level (joins & aggregations)
+
+## Find the top 5 invoices with the highest total amount.
+
+## List customers who have purchased tracks from the genre "Rock".
+
+## Show each customer and the total number of invoices they have.
+
+## Find the average invoice total per country.
+
+## For each album, list the number of tracks and total duration (in seconds).
+
+## Show employees along with the total sales generated by the customers they manage.
+
+## Retrieve all invoices that include tracks by "The Beatles".
+
+# Advanced Level (nested queries, grouping, analytics)
+
+## Find the most popular track (highest total quantity sold).
+
+## Show the customer who has spent the most money overall.
+
+## Find the top 3 genres by total sales.
+
+## Retrieve albums where every track has been purchased at least once.
+
+## List employees who manage customers that bought tracks from more than 5 different genres.
+
+## Show customers who have purchased tracks from multiple media types.
+
+## For each artist, show the total revenue generated from their tracks.
+
+## Use a window function (if Oracle version supports it):
+
+## Rank customers by their total spending within each country.
