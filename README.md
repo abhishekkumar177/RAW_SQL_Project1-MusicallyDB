@@ -1,5 +1,8 @@
 # Music_System
 
+<img width="829" height="651" alt="image" src="https://github.com/user-attachments/assets/4516c184-aab6-48ed-ac77-ccb544e3d592" />
+
+
 # 1 DESIGN THE ALBUM SCHEMA
 
 SQL> CREATE TABLE ALBUM(
